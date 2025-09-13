@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ковбой Донор К - Фандом</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- ПРАВИЛЬНЫЙ ПУТЬ К ФАЙЛУ СТИЛЕЙ -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -15,39 +15,38 @@
 
     <nav id="main-nav">
         <ul>
-            <li><a href="#">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li class="dropdown">
-                <a href="#" class="drop-btn">Персонажи ▼</a>
+                <!-- Ссылка на основную страницу персонажей -->
+                <a href="characters.html" class="drop-btn">Персонажи ▼</a>
                 <div class="dropdown-content">
-                    <a href="#">Донор К</a>
-                    <a href="#">Персонаж 2</a>
-                    <a href="#">Персонаж 3</a>
+                    <!-- Прямые ссылки на страницы конкретных персонажей -->
+                    <a href="characters/adam-jensen.html">Адам Дженсен</a>
+                    <a href="characters/alexey-dmitrievich-kovalev.html">Алексей Ковалев</a>
+                    <a href="characters/anna-schmidt.html">Анна Шмидт</a>
+                    <!-- Добавьте остальных персонажей по аналогии -->
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#" class="drop-btn">Локации ▼</a>
+                <a href="world.html" class="drop-btn">Мир ▼</a>
                 <div class="dropdown-content">
-                    <a href="#">Город N</a>
-                    <a href="#">Пустоши</a>
+                    <a href="history.html">История</a>
+                    <!-- Можно добавить ссылки на конкретные локации, если будут -->
                 </div>
             </li>
-            <li><a href="#">Сюжет</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="about.html">О проекте</a></li>
         </ul>
     </nav>
 
     <div class="main-container">
         <article class="main-content">
-            <h2>Донор К</h2>
+            <h2>Добро пожаловать!</h2>
             <p>
-                Здесь будет основное описание персонажа. Донор К — загадочный ковбой, путешествующий по безжизненным пустошам постапокалиптического мира. Его прошлое окутано тайной, а цели неясны. Он не герой и не злодей, а скорее сила природы, следующая своему собственному кодексу чести.
+                Это главная страница фан-вики, посвященной вселенной "Ковбоя Донора К". Здесь вы найдете информацию о персонажах, мире, истории и многом другом.
             </p>
             <p>
-                Его прозвище "Донор" происходит от странной способности... (здесь вы можете продолжить описание).
-            </p>
-
-            <h3>Биография</h3>
-            <p>
-                Ранние годы Донора К неизвестны. Первые упоминания о нем появляются в записях выживших из Города N, где он появился из ниоткуда и в одиночку остановил банду рейдеров, не проронив ни слова.
+                Используйте навигацию выше для перемещения по сайту.
             </p>
 
         </article>
@@ -61,8 +60,9 @@
                 <tbody>
                     <tr>
                         <td colspan="2" style="text-align: center;">
-                            <img src="https://via.placeholder.com/300x200" alt="Изображение Донора К" style="width: 100%;">
-                            <div>Краткая подпись к изображению</div>
+                            <!-- ПРАВИЛЬНЫЙ ПУТЬ К ИЗОБРАЖЕНИЮ -->
+                            <img src="images/placeholder1.png" alt="Изображение Донора К" style="width: 100%;">
+                            <div>Загадочный всадник</div>
                         </td>
                     </tr>
                     <tr>
@@ -74,14 +74,6 @@
                         <td>Донор, Молчаливый всадник</td>
                     </tr>
                     <tr>
-                        <th>Вид:</th>
-                        <td>Человек (модифицированный)</td>
-                    </tr>
-                    <tr>
-                        <th>Пол:</th>
-                        <td>Мужской</td>
-                    </tr>
-                    <tr>
                         <th>Статус:</th>
                         <td>Жив</td>
                     </tr>
@@ -90,6 +82,7 @@
         </aside>
     </div>
 
-    <script src="script.js"></script>
+    <!-- ПРАВИЛЬНЫЙ ПУТЬ К ФАЙЛУ СКРИПТА -->
+    <script src="js/script.js"></script>
 </body>
 </html>
