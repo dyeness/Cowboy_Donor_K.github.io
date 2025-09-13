@@ -2,7 +2,7 @@
 :root {
     --wiki-bg: #f9f9f9;
     --text-color: #333;
-    --header-bg: #1e1e1e;
+    --header-bg: #2a2a2a;
     --header-text: #fff;
     --accent-color: #006cb0;
     --border-color: #c8ccd1;
@@ -35,7 +35,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 10px;
-    text-align: center;
 }
 
 /* Заголовок */
@@ -48,11 +47,13 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 .wiki-logo {
     font-size: 2rem;
     font-weight: bold;
+    display: inline-block;
 }
 
 .theme-toggle {
@@ -60,33 +61,41 @@ body {
     border: none;
     padding: 0.5rem 1rem;
     color: var(--header-text);
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
+    margin-left: 1rem;
+    vertical-align: middle;
 }
 
 /* Навигация */
 .wiki-nav {
     background-color: var(--header-bg);
     padding: 0.5rem 0;
-    margin-top: 3rem;
+    margin-top: 60px; /* Отступ под шапку */
+    position: sticky;
+    top: 60px;
+    z-index: 900;
+    text-align: center;
 }
 
 .wiki-nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     gap: 1rem;
+    margin: 0 auto;
 }
 
 .wiki-nav li {
     position: relative;
+    display: inline-block;
 }
 
 .wiki-nav a {
     color: var(--header-text);
     text-decoration: none;
     padding: 0.5rem 1rem;
+    display: block;
 }
 
 .wiki-nav a:hover, .wiki-nav a.active {
@@ -114,6 +123,8 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    left: 0;
+    top: 100%;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -124,6 +135,7 @@ body {
     padding: 0.5rem 1rem;
     color: var(--header-text);
     display: block;
+    text-align: left;
 }
 
 .dropdown-menu li a:hover {
@@ -132,12 +144,12 @@ body {
 
 /* Основной контент */
 .wiki-content {
-    margin-top: 120px; /* Отступ для фиксированного заголовка и навигации */
+    margin-top: 120px; /* Отступ для шапки и навигации */
     padding: 2rem 0;
-    text-align: left;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .wiki-content h1 {
@@ -151,6 +163,7 @@ body {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--accent-color);
+    text-align: left;
 }
 
 .infobox {
@@ -159,8 +172,9 @@ body {
     border: 1px solid var(--border-color);
     padding: 1rem;
     margin-bottom: 1.5rem;
-    border-radius: 5px;
+    border-radius: 3px;
     text-align: center;
+    max-width: 300px;
 }
 
 .infobox img {
@@ -174,16 +188,16 @@ body {
 .character-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 1.5rem;
+    margin: 1rem auto;
     background-color: var(--table-bg);
     border: 1px solid var(--border-color);
+    text-align: left;
 }
 
 .character-table th,
 .character-table td {
     padding: 0.5rem;
     border: 1px solid var(--border-color);
-    text-align: left;
 }
 
 .character-table th {
@@ -200,6 +214,8 @@ body {
     list-style: none;
     padding: 0;
     text-align: left;
+    margin: 1rem auto;
+    max-width: 600px;
 }
 
 .feature-list li {
@@ -209,6 +225,10 @@ body {
 /* Навигация внутри контента */
 .nav-section {
     margin-bottom: 1.5rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-section h3 {
@@ -219,7 +239,6 @@ body {
 
 .nav-section p {
     margin: 0.3rem 0;
-    text-align: left;
 }
 
 /* Галерея */
@@ -234,7 +253,7 @@ body {
 .gallery img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 3px;
     border: 1px solid var(--border-color);
     transition: transform 0.2s;
 }
@@ -272,5 +291,9 @@ body {
 
     .wiki-content {
         margin-top: 100px;
+    }
+
+    .infobox {
+        max-width: 100%;
     }
 }
