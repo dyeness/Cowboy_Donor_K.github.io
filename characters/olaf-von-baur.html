@@ -3,91 +3,404 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Олаф Фон Баур — генномодифицированный воин Вики Донор Ковбой К.">
-    <meta name="keywords" content="Вики, Донор Ковбой К, Олаф Фон Баур, Vilda vikingar">
+    <meta name="description" content="Олаф Фон Баур — генномодифицированный воин организации Vilda vikingar в мире Донор Ковбой К">
+    <meta name="keywords" content="Олаф Фон Баур, Vilda vikingar, генномодифицированный воин, Донор Ковбой К">
     <meta name="author" content="Фандомное сообщество">
-    <title>Вики Донор Ковбой К | Олаф Фон Баур</title>
-    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
+    <title>Олаф Фон Баур | Вики Донор Ковбой К</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <!-- Верхняя панель -->
     <header class="wiki-header">
-        <div class="wiki-logo">Вики Донор Ковбой К</div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-    </header>
-    <nav class="wiki-nav">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li class="dropdown">
-                <a href="../characters.html" class="dropdown-toggle">Персонажи</a>
-                <ul class="dropdown-menu">
-                    <li><a href="ancestor-of-olaf.html">Предок Олафа</a></li>
-                    <li><a href="adam-jensen.html">Адам Дженсен</a></li>
-                    <li><a href="b1d3n-1002.html">B1D3N-1002</a></li>
-                </ul>
-            </li>
-            <li><a href="../world.html">Мир</a></li>
-            <li><a href="../history.html">История</a></li>
-            <li><a href="../gallery.html">Галерея</a></li>
-            <li><a href="../about.html">О проекте</a></li>
-        </ul>
-    </nav>
-    <div class="wiki-container">
-        <main class="wiki-content">
-            <h1>Олаф Фон Баур</h1>
-            <div class="infobox">
-                <img src="../images/placeholder1.jpg" alt="Олаф Фон Баур">
+        <div class="header-content">
+            <div class="wiki-logo">🤠 Вики Донор Ковбой К</div>
+            <div class="header-actions">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Поиск по вики...">
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Переключить тему">🌙</button>
             </div>
-            <table class="character-table">
+        </div>
+    </header>
+
+    <!-- Основной контейнер -->
+    <div class="wiki-container">
+        <!-- Боковая навигация -->
+        <aside class="wiki-sidebar">
+            <!-- Навигация -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">Навигация</div>
+                <div class="sidebar-content">
+                    <div class="nav-item">
+                        <a href="../index.html" class="nav-link">Главная страница</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../about.html" class="nav-link">О проекте</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../history.html" class="nav-link">История мира</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../gallery.html" class="nav-link">Галерея</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Персонажи -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">Персонажи</div>
+                <div class="sidebar-content">
+                    <div class="nav-item dropdown-nav">
+                        <div class="nav-link dropdown-toggle open" onclick="toggleDropdown(this)">
+                            Главные герои
+                        </div>
+                        <div class="dropdown-content open">
+                            <div class="nav-item">
+                                <a href="ancestor-of-olaf.html" class="nav-link">Предок Олафа</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="olaf-von-baur.html" class="nav-link active">Олаф Фон Баур</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="adam-jensen.html" class="nav-link">Адам Дженсен</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown-nav">
+                        <div class="nav-link dropdown-toggle" onclick="toggleDropdown(this)">
+                            Второстепенные
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="nav-item">
+                                <a href="b1d3n-1002.html" class="nav-link">B1D3N-1002</a>
+                            </div>
+                            <div class="nav-item">
+                                <a href="anna-schmidt.html" class="nav-link">Анна Шмидт</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../characters.html" class="nav-link">Все персонажи</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Связанные статьи -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">Связанные статьи</div>
+                <div class="sidebar-content">
+                    <div class="nav-item">
+                        <a href="../organizations/vilda-vikingar.html" class="nav-link">Vilda vikingar</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="ancestor-of-olaf.html" class="nav-link">Предок Олафа</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../locations/toner.html" class="nav-link">Тонер</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="../creatures/rajurs.html" class="nav-link">Раджуры</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Инструменты -->
+            <div class="sidebar-section">
+                <div class="sidebar-title">Инструменты</div>
+                <div class="sidebar-content">
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Править страницу</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">История правок</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Обсуждение</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Основной контент -->
+        <main class="wiki-content">
+            <h1 class="page-title">Олаф Фон Баур</h1>
+            
+            <!-- Инфобокс персонажа -->
+            <div class="infobox">
+                <div class="infobox-header">Олаф Фон Баур</div>
+                <div class="infobox-image">
+                    <img src="../images/placeholder1.png" alt="Олаф Фон Баур">
+                </div>
+                <div class="infobox-content">
+                    <div class="infobox-row">
+                        <div class="infobox-label">Полное имя</div>
+                        <div class="infobox-value">Олаф Фон Баур</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Статус</div>
+                        <div class="infobox-value">Пропал без вести</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Роль</div>
+                        <div class="infobox-value">Генномодифицированный воин</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Организация</div>
+                        <div class="infobox-value"><a href="../organizations/vilda-vikingar.html">Vilda vikingar</a></div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Происхождение</div>
+                        <div class="infobox-value">15-й клон-образец</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Основа ДНК</div>
+                        <div class="infobox-value"><a href="ancestor-of-olaf.html">Предок Олафа</a></div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Особенность</div>
+                        <div class="infobox-value">Саморегенерирующие клетки</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Местоположение</div>
+                        <div class="infobox-value"><a href="../locations/toner.html">Тонер</a> (последнее известное)</div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="content-text">
+                <strong>Олаф Фон Баур</strong> — генномодифицированный воин, служащий в элитной организации 
+                <a href="../organizations/vilda-vikingar.html">Vilda vikingar</a>. Он является 15-м клоном-образцом, 
+                созданным на основе ДНК легендарного скандинавского охотника на раджуров, известного как 
+                <a href="ancestor-of-olaf.html">Предок Олафа</a>.
+            </p>
+
+            <!-- Биография -->
+            <h2 class="section-title">Биография</h2>
+            
+            <h3 class="section-title" style="font-size: 1.4rem; margin-top: 20px;">Происхождение</h3>
+            <p class="content-text">
+                Олаф был создан в результате передовых генетических экспериментов, проводимых шведскими 
+                учеными. Используя ДНК легендарного охотника на раджуров, исследователи смогли создать 
+                серию клонов с улучшенными физическими характеристиками. Олаф стал 15-м успешным образцом 
+                в этой программе.
+            </p>
+
+            <p class="content-text">
+                Особенностью Олафа являются саморегенерирующиеся клетки, которые не только продлевают его 
+                жизнь, но и делают его практически бессмертным. Этот генетический дар позволяет ему быстро 
+                восстанавливаться после ранений и сохранять физическую форму на протяжении десятилетий.
+            </p>
+
+            <h3 class="section-title" style="font-size: 1.4rem;">Служба в Vilda vikingar</h3>
+            <p class="content-text">
+                После создания Олаф был принят в ряды элитной организации <em>Vilda vikingar</em> 
+                (в переводе с шведского — "Дикие викинги"), специализирующейся на поиске и уничтожении 
+                раджуров. Его уникальные способности и генетическое наследие сделали его одним из самых 
+                ценных агентов организации.
+            </p>
+
+            <!-- Способности и навыки -->
+            <h2 class="section-title">Способности и навыки</h2>
+            
+            <table class="content-table">
                 <tr>
-                    <th colspan="2">Характеристики</th>
+                    <th>Способность</th>
+                    <th>Уровень</th>
+                    <th>Описание</th>
                 </tr>
                 <tr>
-                    <td><strong>Имя:</strong></td>
-                    <td>Олаф Фон Баур</td>
+                    <td><strong>Саморегенерация</strong></td>
+                    <td>Экстремальный</td>
+                    <td>Способность быстро восстанавливать поврежденные ткани</td>
                 </tr>
                 <tr>
-                    <td><strong>Роль:</strong></td>
-                    <td>Генномодифицированный воин</td>
+                    <td><strong>Физическая сила</strong></td>
+                    <td>Сверхчеловеческий</td>
+                    <td>Превышает возможности обычного человека в 3-4 раза</td>
                 </tr>
                 <tr>
-                    <td><strong>Организация:</strong></td>
-                    <td>Vilda vikingar</td>
+                    <td><strong>Дедуктивное мышление</strong></td>
+                    <td>Гениальный</td>
+                    <td>Способность к сложному анализу и логическим выводам</td>
                 </tr>
                 <tr>
-                    <td><strong>Особенность:</strong></td>
-                    <td>Саморегенерирующиеся клетки</td>
+                    <td><strong>Выносливость</strong></td>
+                    <td>Сверхчеловеческий</td>
+                    <td>Может действовать без отдыха длительное время</td>
+                </tr>
+                <tr>
+                    <td><strong>Боевые навыки</strong></td>
+                    <td>Мастерский</td>
+                    <td>Владение холодным и огнестрельным оружием</td>
+                </tr>
+                <tr>
+                    <td><strong>Анализ ДНК</strong></td>
+                    <td>Профессиональный</td>
+                    <td>Может определить генетические особенности населения</td>
                 </tr>
             </table>
-            <h2>Биография</h2>
-            <p>Олаф — 15-й образец клона, созданного из ДНК легендарного скандинавского охотника на раджуров. Шведские учёные добились нестареющих, саморегенерирующих клеток, продлив его жизнь. Он служит в 'Vilda vikingar', выполняя миссии по поиску и уничтожению раджуров. Потеряв связь с командованием, Олаф пропал в Тонере, продолжая искать человеческую жизнь в Америке.</p>
-            <h2>Миссия</h2>
-            <p>Олаф анализирует гены населения и ищет следы раджуров. Если территория будет захвачена, 'VV' планирует массовое уничтожение. Его дедуктивные и физические навыки уникальны.</p>
-            <h2>Судьба</h2>
-            <p>Потеряв связь, Олаф столкнулся с новыми угрозами, включая лабораторию с экспериментами над раджурами. Смогут ли его найти до принятия мер 'VV'?</p>
-            <h2>Навигация</h2>
-            <div class="nav-section">
-                <h3>Vilda vikingar</h3>
-                <p>Олаф Фон Баур</p>
-                <h3>Союзники</h3>
-                <p><a href="ancestor-of-olaf.html">Предок Олафа</a> • <a href="anna-schmidt.html">Анна Шмидт</a></p>
-                <h3>Противники</h3>
-                <p>Раджуры</p>
+
+            <!-- Миссия -->
+            <h2 class="section-title">Основная миссия</h2>
+            
+            <p class="content-text">
+                Основная задача Олафа заключается в анализе генетического состава человеческого населения 
+                и поиске следов присутствия раджуров. Он проводит тщательное исследование генов местного 
+                населения, выявляя потенциальные угрозы и признаки заражения.
+            </p>
+
+            <p class="content-text">
+                В случае обнаружения значительного присутствия раджуров на территории, организация 
+                <em>Vilda vikingar</em> планирует применить кардинальные меры, включая массовое 
+                уничтожение зараженных областей. Олаф служит своего рода разведчиком, предоставляющим 
+                критически важную информацию для принятия таких решений.
+            </p>
+
+            <!-- Исчезновение -->
+            <h2 class="section-title">Исчезновение в Тонере</h2>
+            
+            <p class="content-text">
+                Во время выполнения миссии в <a href="../locations/toner.html">Тонере</a>, Олаф потерял 
+                связь с командованием <em>Vilda vikingar</em>. Последние сообщения указывали на то, что 
+                он продолжал поиски признаков человеческой жизни в американских территориях.
+            </p>
+
+            <p class="content-text">
+                По неподтвержденным данным, Олаф столкнулся с неизвестной лабораторией, где проводились 
+                эксперименты над раджурами. Что именно произошло в этой лаборатории и какова судьба 
+                Олафа, остается загадкой.
+            </p>
+
+            <div class="nav-box">
+                <div class="nav-box-title">⚠️ Текущая ситуация</div>
+                <div class="nav-box-content">
+                    <p>Олаф Фон Баур официально считается пропавшим без вести. Организация <em>Vilda vikingar</em> 
+                    продолжает ждать от него сигнала, но если связь не будет восстановлена в ближайшее время, 
+                    могут быть предприняты кардинальные меры в отношении территории Тонера.</p>
+                </div>
             </div>
-            <h2>См. также</h2>
-            <ul class="feature-list">
-                <li><a href="../characters.html">Все персонажи</a></li>
-                <li><a href="../world.html">Мир</a></li>
+
+            <!-- Отношения -->
+            <h2 class="section-title">Связи и отношения</h2>
+            
+            <h3 class="section-title" style="font-size: 1.4rem;">Союзники</h3>
+            <ul class="content-list">
+                <li><strong><a href="anna-schmidt.html">Анна Шмидт</a></strong> — коллега по организации Vilda vikingar</li>
+                <li><strong>Командование VV</strong> — руководство организации Vilda vikingar</li>
+                <li><strong>Шведские ученые</strong> — создатели проекта клонирования</li>
             </ul>
+
+            <h3 class="section-title" style="font-size: 1.4rem;">Противники</h3>
+            <ul class="content-list">
+                <li><strong><a href="../creatures/rajurs.html">Раджуры</a></strong> — основная цель для уничтожения</li>
+                <li><strong>Неизвестные экспериментаторы</strong> — операторы таинственной лаборатории в Тонере</li>
+            </ul>
+
+            <!-- Интересные факты -->
+            <h2 class="section-title">Интересные факты</h2>
+            
+            <ul class="content-list">
+                <li>Олаф является одним из немногих успешных долгосрочных клонов в истории проекта</li>
+                <li>Его саморегенерирующие способности превосходят даже способности оригинала — Предка Олафа</li>
+                <li>Несмотря на искусственное происхождение, Олаф обладает полным спектром человеческих эмоций</li>
+                <li>Его навыки анализа ДНК позволяют определить генетические особенности с точностью до 99.7%</li>
+                <li>Олаф может обходиться без сна до 72 часов без потери эффективности</li>
+                <li>Последнее сообщение от Олафа было получено 47 дней назад</li>
+            </ul>
+
+            <!-- Навигация по персонажам -->
+            <div class="nav-box">
+                <div class="nav-box-title">Персонажи Vilda vikingar</div>
+                <div class="nav-box-content">
+                    <div class="nav-links">
+                        <a href="ancestor-of-olaf.html">Предок Олафа</a>
+                        <a href="anna-schmidt.html">Анна Шмидт</a>
+                        <a href="../organizations/vilda-vikingar.html">Организация VV</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-box">
+                <div class="nav-box-title">См. также</div>
+                <div class="nav-box-content">
+                    <div class="nav-links">
+                        <a href="../characters.html">Все персонажи</a>
+                        <a href="../world.html">Мир</a>
+                        <a href="../locations/toner.html">Тонер</a>
+                        <a href="../creatures/rajurs.html">Раджуры</a>
+                        <a href="../organizations/vilda-vikingar.html">Vilda vikingar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Галерея -->
+            <h2 class="section-title">Галерея</h2>
+            <p class="content-text">
+                <em>Изображения будут добавлены по мере поступления материалов от сообщества.</em>
+            </p>
+
         </main>
     </div>
+
+    <!-- Футер -->
     <footer class="wiki-footer">
-        <p>&copy; 2025 Фандом 'Донор Ковбой К'. Все права защищены.</p>
+        <p>&copy; 2025 Фандом 'Донор Ковбой К'. Создано сообществом для сообщества.</p>
+        <p>Последнее обновление страницы: 15 сентября 2025</p>
     </footer>
+
+    <!-- JavaScript -->
     <script>
+        // Переключение темы
         function toggleTheme() {
             document.body.classList.toggle('dark-theme');
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (document.body.classList.contains('dark-theme')) {
+                themeToggle.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
         }
+
+        // Загрузка сохраненной темы
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.querySelector('.theme-toggle').textContent = '☀️';
+            }
+        });
+
+        // Выпадающие меню в боковой панели
+        function toggleDropdown(element) {
+            const dropdownContent = element.nextElementSibling;
+            const isOpen = dropdownContent.classList.contains('open');
+            
+            // Закрываем все выпадающие меню
+            document.querySelectorAll('.dropdown-content').forEach(content => {
+                content.classList.remove('open');
+            });
+            document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                toggle.classList.remove('open');
+            });
+            
+            // Открываем выбранное, если оно было закрыто
+            if (!isOpen) {
+                dropdownContent.classList.add('open');
+                element.classList.add('open');
+            }
+        }
+
+        // Поиск
+        document.querySelector('.search-box').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    alert('Поиск: ' + searchTerm);
+                }
+            }
+        });
     </script>
 </body>
 </html>
