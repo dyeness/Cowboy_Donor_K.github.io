@@ -22,7 +22,7 @@ body.dark-theme {
 
 /* Общие стили */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -38,7 +38,7 @@ body {
 
 .wiki-logo {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 300;
     color: var(--accent-color);
     padding: 1rem;
     text-align: center;
