@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Хронология и ключевые события фандома 'Мир Звёздного пути'.">
+    <meta name="description" content="Узнайте историю фандома 'Мир Звёздного пути' и его развития.">
     <meta name="keywords" content="фандом, вики, история, Звёздный путь">
     <meta name="author" content="Фандомное сообщество">
     <title>Мир Звёздного пути | История</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <div class="wiki-logo">Мир Звёздного пути</div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-    </header>
-    <div class="container">
-        <nav class="sidebar">
-            <div class="sidebar-toggle">☰ Меню</div>
+        <nav class="top-nav">
             <ul>
                 <li><a href="index.html">Главная</a></li>
-                <li><a href="characters.html">Персонажи</a></li>
+                <li class="dropdown">
+                    <a href="characters.html" class="dropdown-toggle">Персонажи</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="characters/ancestor-of-olaf.html">Предок Олафа</a></li>
+                        <li><a href="characters/b1d3n-1002.html">B1D3N-1002</a></li>
+                        <li><a href="characters/barack-obama-jr.html">Барак Обама</a></li>
+                    </ul>
+                </li>
                 <li><a href="world.html">Мир</a></li>
                 <li><a href="history.html" class="active">История</a></li>
                 <li><a href="gallery.html">Галерея</a></li>
                 <li><a href="about.html">О проекте</a></li>
             </ul>
         </nav>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+    <div class="container">
         <main class="content">
             <h1>История</h1>
-            <p class="intro">Путешествие через время в <strong>Мир Звёздного пути</strong> — от первых колонизаций до галактических союзов.</p>
-
+            <p class="intro">Погрузитесь в историю <strong>Мира Звёздного пути</strong> и её ключевые события.</p>
             <div class="infobox">
-                <h2>Хронология</h2>
-                <ul>
-                    <li><strong>2100:</strong> Человечество основывает первую колонию на Элизии.</li>
-                    <li><strong>2150:</strong> Первая встреча с ксаргонцами, начало конфликта.</li>
-                    <li><strong>2200:</strong> Подписание мирного договора, создание Галактического Союза.</li>
-                </ul>
+                <h2>Прошлое</h2>
+                <p>История галактики полна войн и открытий.</p>
             </div>
         </main>
     </div>
