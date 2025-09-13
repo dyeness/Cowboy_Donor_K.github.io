@@ -3,86 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ковбой Донор К - Фандом</title>
-    <!-- ПРАВИЛЬНЫЙ ПУТЬ К ФАЙЛУ СТИЛЕЙ -->
+    <meta name="description" content="Добро пожаловать в Вики Донор Ковбой К. Исследуйте персонажей, мир, историю и галерею.">
+    <meta name="keywords" content="Вики, Донор Ковбой К, персонажи, мир, история, галерея">
+    <meta name="author" content="Фандомное сообщество">
+    <title>Вики Донор Ковбой К | Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Вселенная "Ковбоя Донора К"</h1>
+    <header class="wiki-header">
+        <div class="wiki-logo">Вики Донор Ковбой К</div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </header>
-
-    <nav id="main-nav">
+    <nav class="wiki-nav">
         <ul>
-            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html" class="active">Главная</a></li>
             <li class="dropdown">
-                <!-- Ссылка на основную страницу персонажей -->
-                <a href="characters.html" class="drop-btn">Персонажи ▼</a>
-                <div class="dropdown-content">
-                    <!-- Прямые ссылки на страницы конкретных персонажей -->
-                    <a href="characters/adam-jensen.html">Адам Дженсен</a>
-                    <a href="characters/alexey-dmitrievich-kovalev.html">Алексей Ковалев</a>
-                    <a href="characters/anna-schmidt.html">Анна Шмидт</a>
-                    <!-- Добавьте остальных персонажей по аналогии -->
-                </div>
+                <a href="characters.html" class="dropdown-toggle">Персонажи</a>
+                <ul class="dropdown-menu">
+                    <li><a href="characters/ancestor-of-olaf.html">Предок Олафа</a></li>
+                    <li><a href="characters/adam-jensen.html">Адам Дженсен</a></li>
+                    <li><a href="characters/b1d3n-1002.html">B1D3N-1002</a></li>
+                </ul>
             </li>
-            <li class="dropdown">
-                <a href="world.html" class="drop-btn">Мир ▼</a>
-                <div class="dropdown-content">
-                    <a href="history.html">История</a>
-                    <!-- Можно добавить ссылки на конкретные локации, если будут -->
-                </div>
-            </li>
+            <li><a href="world.html">Мир</a></li>
+            <li><a href="history.html">История</a></li>
             <li><a href="gallery.html">Галерея</a></li>
             <li><a href="about.html">О проекте</a></li>
         </ul>
     </nav>
-
-    <div class="main-container">
-        <article class="main-content">
-            <h2>Добро пожаловать!</h2>
-            <p>
-                Это главная страница фан-вики, посвященной вселенной "Ковбоя Донора К". Здесь вы найдете информацию о персонажах, мире, истории и многом другом.
-            </p>
-            <p>
-                Используйте навигацию выше для перемещения по сайту.
-            </p>
-
-        </article>
-        <aside class="sidebar">
-            <table class="infobox">
-                <thead>
-                    <tr>
-                        <th colspan="2">Донор К</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="2" style="text-align: center;">
-                            <!-- ПРАВИЛЬНЫЙ ПУТЬ К ИЗОБРАЖЕНИЮ -->
-                            <img src="images/placeholder1.png" alt="Изображение Донора К" style="width: 100%;">
-                            <div>Загадочный всадник</div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Полное имя:</th>
-                        <td>Неизвестно</td>
-                    </tr>
-                    <tr>
-                        <th>Прозвища:</th>
-                        <td>Донор, Молчаливый всадник</td>
-                    </tr>
-                    <tr>
-                        <th>Статус:</th>
-                        <td>Жив</td>
-                    </tr>
-                </tbody>
-            </table>
-        </aside>
+    <div class="wiki-container">
+        <main class="wiki-content">
+            <h1>Добро пожаловать в Вики Донор Ковбой К</h1>
+            <p class="intro">Добро пожаловать в вики-фанатскую энциклопедию <strong>Донор Ковбой К</strong> — вымышленной вселенной, полной героев, приключений и тайн.</p>
+            <div class="infobox">
+                <h2>О вики</h2>
+                <p>Эта вики — живое сообщество. Используйте навигацию выше, чтобы узнать больше о персонажах, мире и истории.</p>
+            </div>
+            <h2>Популярные персонажи</h2>
+            <ul class="feature-list">
+                <li><a href="characters/ancestor-of-olaf.html">Предок Олафа</a></li>
+                <li><a href="characters/adam-jensen.html">Адам Дженсен</a></li>
+                <li><a href="characters/b1d3n-1002.html">B1D3N-1002</a></li>
+            </ul>
+        </main>
     </div>
-
-    <!-- ПРАВИЛЬНЫЙ ПУТЬ К ФАЙЛУ СКРИПТА -->
+    <footer class="wiki-footer">
+        <p>&copy; 2025 Фандом 'Донор Ковбой К'. Все права защищены.</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
