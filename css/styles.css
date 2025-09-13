@@ -93,6 +93,50 @@ body {
     background-color: var(--accent-color);
 }
 
+/* Выпадающее меню */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-toggle:hover {
+    background-color: var(--accent-color);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: var(--primary-color);
+    min-width: 200px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    color: white;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--accent-color);
+}
+
 /* Основной контент */
 .content {
     margin-left: 270px;
@@ -178,5 +222,16 @@ footer {
 
     .content {
         margin-left: 0;
+    }
+
+    .dropdown-menu {
+        display: none !important;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
     }
 }
