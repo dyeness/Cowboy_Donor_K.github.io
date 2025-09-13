@@ -5,14 +5,13 @@ function toggleTheme() {
     localStorage.setItem('theme', theme);
 }
 
-// Загрузка сохранённой темы
+// Загрузка сохранённой темы и управление боковой панелью
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
     }
 
-    // Переключение боковой панели на мобильных устройствах
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const sidebar = document.querySelector('.sidebar');
     sidebarToggle.addEventListener('click', () => {
