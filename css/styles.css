@@ -173,6 +173,41 @@ body {
     color: var(--accent-color);
 }
 
+/* Таблица персонажа */
+.character-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    background-color: var(--wiki-bg);
+    border: 1px solid var(--border-color);
+}
+
+.character-table th,
+.character-table td {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.character-table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Навигация */
+.nav-section {
+    margin-bottom: 1.5rem;
+}
+
+.nav-section h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+
+.nav-section p {
+    margin: 0.5rem 0;
+}
+
 /* Галерея */
 .gallery {
     display: grid;
