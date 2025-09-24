@@ -1,18 +1,37 @@
 # Навигация
 
 <details>
-<summary>Персонажи</summary>
+<summary>Персонажи</summary> 
+
+[Папка персонажи](characters)
 
 - [Олаф Фон Баур](characters/OlafFonBaur.md) 
-- [Персонаж 2](character2.md)
-- [Персонаж 3](character3.md)
 
 </details>
+
+<details>
+<summary>Фракции</summary>
+
+[Папка фракции](factions)
+
+- [Название фракции](factions/ExampleFaction.md)
+
+</details>
+
+<details>
+<summary>Термины</summary>
+
+[Папка термины](terms)
+
+- [Пример термина](terms/ExampleTerm.md)
+
+</details>
+
 <details>
 <summary>Разное</summary>
 
-- [Олаф Фон Баур](characters/OlafFonBaur.md) 
-- [Персонаж 2](character2.md)
-- [Персонаж 3](character3.md)
+[Папка разное](other)
 
+- [Библия](other/theBible.md) 
+  
 </details>
